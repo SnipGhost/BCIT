@@ -44,7 +44,7 @@ namespace Lab1
 
                 if (d < 0)
                 {
-                    Console.WriteLine("Иррациональные корни");
+                    Console.WriteLine("Комплексные корни");
                 }
                 else if (d == 0)
                 {
@@ -55,7 +55,7 @@ namespace Lab1
                 {
                     double x1 = (-b + Math.Sqrt(d)) / (2 * a);
                     double x2 = (-b - Math.Sqrt(d)) / (2 * a);
-                    Console.WriteLine("X1 = " + x1 + "\n X2 = " + x2);
+                    Console.WriteLine("X1 = " + x1 + "\nX2 = " + x2);
                 }
 
             } while (AskContinue());
