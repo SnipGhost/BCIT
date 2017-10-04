@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BCIT-Lab2", "BCIT-Lab2\BCIT-Lab2.csproj", "{7F7145E9-9D21-4D92-8ED1-D50F782E1BA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BCIT-Lab1", "BCIT-Lab1\BCIT-Lab1.csproj", "{7A48A742-E133-4EA3-8938-A25D54A6BD6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7F7145E9-9D21-4D92-8ED1-D50F782E1BA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F7145E9-9D21-4D92-8ED1-D50F782E1BA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F7145E9-9D21-4D92-8ED1-D50F782E1BA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A48A742-E133-4EA3-8938-A25D54A6BD6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A48A742-E133-4EA3-8938-A25D54A6BD6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A48A742-E133-4EA3-8938-A25D54A6BD6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A48A742-E133-4EA3-8938-A25D54A6BD6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
