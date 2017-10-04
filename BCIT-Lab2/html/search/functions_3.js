@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['rectangle',['Rectangle',['../class_lab2_1_1_rectangle.html#acdb99dd549f51743792cad788e500849',1,'Lab2::Rectangle']]]
+  ['main',['Main',['../class_lab2_1_1_program.html#a27a77b796d70d0e23c1a5d7db283b845',1,'Lab2::Program']]],
+  ['menu',['Menu',['../class_lab2_1_1_program.html#af02bc1eac4648c46552fb6f266310e2e',1,'Lab2::Program']]]
 ];

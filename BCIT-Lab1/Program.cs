@@ -4,6 +4,11 @@ namespace Lab1
 {
     class Program
     {
+        /**
+         * Ввести значение типа double
+         * @param string prompt
+         *  Приглашение ввода для пользователя
+         */
         static double InputVal(string prompt)
         {
             double a = 0;
@@ -13,6 +18,10 @@ namespace Lab1
             return a;
         }
 
+        /**
+         * Ожидает ввода ответа на вопрос о продолжнеии работы
+         * @return bool Продолжать или нет (True/False)
+         */
         static bool AskContinue()
         {
             Console.Write("\nВыйти? (y/n) [n]: ");

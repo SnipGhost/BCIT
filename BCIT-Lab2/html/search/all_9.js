@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['tostring',['ToString',['../class_lab2_1_1_rectangle.html#a6c03cbd28985951c1c167b51ed47cdd4',1,'Lab2.Rectangle.ToString()'],['../class_lab2_1_1_square.html#ac43e17280bb521a3466a38ec0e4742eb',1,'Lab2.Square.ToString()'],['../class_lab2_1_1_circle.html#ab2ed9c25791cb878a8a8d8857786917d',1,'Lab2.Circle.ToString()']]]
+  ['sqare',['Sqare',['../class_lab2_1_1_program_1_1_s_t_a_t_e.html#a38e1a16e8f362a6c14580625b94cc191',1,'Lab2::Program::STATE']]],
+  ['square',['Square',['../class_lab2_1_1_square.html',1,'Lab2.Square'],['../class_lab2_1_1_square.html#adf14884086bf810bde5cb9dc18e10a82',1,'Lab2.Square.Square()']]],
+  ['state',['STATE',['../class_lab2_1_1_program_1_1_s_t_a_t_e.html',1,'Lab2::Program']]]
 ];
