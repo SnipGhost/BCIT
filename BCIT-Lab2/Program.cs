@@ -24,19 +24,26 @@ namespace Lab2
         static string Menu()
         {
             Console.WriteLine("Площадь чего вы бы хотели посчитать?");
-            Console.WriteLine("1) Прямоугольник;");
-            Console.WriteLine("2) Квадрат;");
-            Console.WriteLine("3) Окружность;");
-            Console.WriteLine("e) Выход;");
+            Console.WriteLine("1. Прямоугольник;");
+            Console.WriteLine("2. Квадрат;");
+            Console.WriteLine("3. Окружность;");
+            Console.WriteLine("e. Выход;");
             return Console.ReadLine();
+        }
+
+        static void ClearScreen()
+        {
+            Console.WriteLine("Нажмите любую клавишу для продолжения ...");
+            Console.ReadKey();
+            Console.Clear();
         }
 
         static void Main(string[] args)
         {
-            bool work = true;
             IPrint obj;
+            bool exitFlag = false;
             double a1, b1;
-            while (work)
+            do
             {
                 switch (Menu())
                 {
@@ -49,24 +56,23 @@ namespace Lab2
 
                     case STATE.Sqare:
                         a1 = InputVal("Введите высоту квадрата \n");
-                        obj = new Quadrate(a1);
+                        obj = new Square(a1);
                         obj.Print();
                         break;
 
                     case STATE.Circle:
                         a1 = InputVal("Введите радиус окружности \n");
                         obj = new Circle(a1);
-                        obj.Print(); // Равносильно: Console.WriteLine(obj)    
+                        obj.Print();
                         break;
 
                     default:
-                        work = false;
+                        exitFlag = true;
                         break;
                 }
-                Console.WriteLine("Нажмите любую клавишу для продолжения ...");
-                Console.ReadKey();
-                Console.Clear();
-            }
+                ClearScreen();
+
+            } while (!exitFlag);
         }
 
 
@@ -79,98 +85,61 @@ namespace Lab2
 
     abstract class GeometricFigure
     {
-        public GeometricFigure() { }
-        public virtual double Square()
-        {
-            return 0;
-        }
+        public abstract double Area();
         public abstract override string ToString();
     }
 
     class Rectangle : GeometricFigure, IPrint
     {
-        public Rectangle(double height1, double width1)
+        public double h = 0, w = 0;
+        public Rectangle(double height, double width)
         {
-            _height = height1;
-            _width = width1;
+            h = height;
+            w = width;
         }
 
-        private double _height = 0;
-        public double height
+        public override double Area()
         {
-            get { return _height; }
-            set { _height = value; }
-        }
-
-        private double _width = 0;
-        public double width
-        {
-            get { return _width; }
-            set { _width = value; }
-        }
-
-        public override double Square()
-        {
-            return _width * _height;
+            return w * h;
         }
 
         public override string ToString()
         {
-            return "Rectangle: " + width.ToString() + "x" + height.ToString() + ", S = " + Square().ToString();
+            return "Rectangle: " + w.ToString() + "x" + h.ToString() + ", S = " + Area().ToString();
         }
 
-        public void Print()
-        {
-            Console.WriteLine(this);
-        }
+        public void Print() => Console.WriteLine(this);
     }
 
-    class Quadrate : Rectangle
+    class Square : Rectangle
     {
-        public Quadrate(double height1) : base(height1, height1) { }
-
-        public override double Square()
-        {
-            return height * height;
-        }
+        public Square(double length) : base(length, length) {}
 
         public override string ToString()
         {
-            return "Square: " + height.ToString() + "x" + height.ToString() + ", S = " + Square().ToString();
+            return "Square: " + h.ToString() + "x" + h.ToString() + ", S = " + Area().ToString();
         }
 
     }
 
     class Circle : GeometricFigure, IPrint
     {
+        public double r = 0;
         public Circle(double radius)
         {
-            _radius = radius;
+            r = radius;
         }
 
-        private double _radius = 0;
-
-        public double radius
+        public override double Area()
         {
-            get { return _radius; }
-            set { _radius = value; }
-        }
-
-        public override double Square()
-        {
-            return Math.PI * _radius * _radius;
+            return Math.PI * r * r;
         }
 
         public override string ToString()
         {
-            return "Circle: " + radius.ToString() + ", S = " + Square().ToString();
+            return "Circle: " + r.ToString() + ", S = " + Area().ToString();
         }
 
-        public void Print()
-        {
-            Console.WriteLine(this);
-            //Console.WriteLine(this.ToString());
-            //Console.WriteLine(ToString());
-        }
+        public void Print() => Console.WriteLine(this);
     }
 }
