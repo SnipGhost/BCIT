@@ -12,7 +12,11 @@
 
 ### II. Схема данных
 
-![]
+![GeometricFigure](img/1.png)
+![IPrint](img/2.png)
+![Rectangle](img/3.png)
+![Square](img/4.png)
+![Circle](img/5.png)
 
 ### III. Код программы
 

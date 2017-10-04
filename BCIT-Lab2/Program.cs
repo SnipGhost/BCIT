@@ -114,9 +114,12 @@ namespace Lab2
      */
     class Rectangle : GeometricFigure, IPrint
     {
-        
-        public double h = 0; ///< Высота
-        public double w = 0; ///< Ширина
+
+        private double h = 0; ///< Высота
+        private double w = 0; ///< Ширина
+
+        public double H { get => h; set => h = value; }
+        public double W { get => w; set => w = value; }
 
         /**
          * Конструктор класса
@@ -127,8 +130,8 @@ namespace Lab2
          */
         public Rectangle(double height, double width)
         {
-            h = height;
-            w = width;
+            H = height;
+            W = width;
         }
 
         /**
@@ -136,7 +139,7 @@ namespace Lab2
          */
         public override double Area()
         {
-            return w * h;
+            return W * H;
         }
 
         /**
@@ -145,7 +148,7 @@ namespace Lab2
          */
         public override string ToString()
         {
-            return "Rectangle: " + w.ToString() + "x" + h.ToString() + ", S = " + Area().ToString();
+            return "Rectangle: " + W.ToString() + "x" + H.ToString() + ", S = " + Area().ToString();
         }
 
         /**
@@ -172,7 +175,7 @@ namespace Lab2
          */
         public override string ToString()
         {
-            return "Square: " + h.ToString() + "x" + h.ToString() + ", S = " + Area().ToString();
+            return "Square: " + H.ToString() + "x" + H.ToString() + ", S = " + Area().ToString();
         }
 
     }
@@ -182,7 +185,9 @@ namespace Lab2
      */
     class Circle : GeometricFigure, IPrint
     {
-        public double r = 0; ///< Радиус
+        private double r = 0; ///< Радиус
+
+        public double R { get => r; set => r = value; }
 
         /**
          * Конструктор класса
@@ -191,7 +196,7 @@ namespace Lab2
          */
         public Circle(double radius)
         {
-            r = radius;
+            R = radius;
         }
 
         /**
@@ -199,7 +204,7 @@ namespace Lab2
          */
         public override double Area()
         {
-            return Math.PI * r * r;
+            return Math.PI * R * R;
         }
 
         /**
@@ -208,7 +213,7 @@ namespace Lab2
          */
         public override string ToString()
         {
-            return "Circle: " + r.ToString() + ", S = " + Area().ToString();
+            return "Circle: " + R.ToString() + ", S = " + Area().ToString();
         }
 
         /**
