@@ -43,4 +43,19 @@ cd BCIT-Lab1/
 ../docgen.sh 1 Program.cs README.md tests.txt description.txt
 ```
 
+Или с вводом на ходу (пусто - по умолчанию):
+```bash
+cd BCIT-Lab1/
+../docgen.sh
+# Input number of Lab: 1
+# Input source file (.cs): 
+# Input output file (.md): 
+# Input tests file: 
+# Input description file: 
+# TEST[0]: 1\n-2\n1\ny\n
+# TEST[1]: 1\n7\n10\ny\n
+# TEST[2]: 2\n4\n3\ny\n
+# TEST[3]: 1\n5\n2\ny\n
+```
+
 ### <p align="right"> Автор: [Михаил Кучеренко "SnipGhost"](https://vk.com/snipghost), 04.10.2017 </p>
