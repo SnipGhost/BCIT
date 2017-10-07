@@ -16,6 +16,9 @@ namespace Lab2
             do
                 Console.Write(prompt);
             while (!double.TryParse(Console.ReadLine(), out a));
+            #if AUTOTEST
+                Console.WriteLine(a);
+            #endif
             return a;
         }
 
@@ -39,7 +42,11 @@ namespace Lab2
             Console.WriteLine("2. Квадрат;");
             Console.WriteLine("3. Окружность;");
             Console.WriteLine("e. Выход;");
-            return Console.ReadLine();
+            string s = Console.ReadLine();
+            #if AUTOTEST
+                Console.WriteLine(s);
+            #endif
+            return s;
         }
 
         /**
@@ -47,8 +54,8 @@ namespace Lab2
          */
         static void ClearScreen()
         {
-            Console.WriteLine("Нажмите любую клавишу для продолжения ...");
-            Console.ReadKey();
+            Console.WriteLine("Нажмите enter для продолжения ...");
+            Console.ReadLine();
             Console.Clear();
         }
 

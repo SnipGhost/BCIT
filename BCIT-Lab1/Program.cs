@@ -15,6 +15,9 @@ namespace Lab1
             do
                 Console.Write(prompt);
             while (!double.TryParse(Console.ReadLine(), out a));
+            #if AUTOTEST
+                Console.WriteLine(a.ToString());
+            #endif
             return a;
         }
 
@@ -26,6 +29,9 @@ namespace Lab1
         {
             Console.Write("\nВыйти? (y/n) [n]: ");
             string s = Console.ReadLine();
+            #if AUTOTEST
+                Console.WriteLine(s);
+            #endif
             return !(s == "y");
         }
 
