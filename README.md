@@ -36,6 +36,12 @@ BCIT
 ### DOCGEN
 
 Все отчеты к лабораторным работам сгенерированы с помощью утилиты DOCGEN.  
+
+Для работы требует:
+- [Pandoc](https://pandoc.org/installing.html)
+- [Mono](http://www.mono-project.com/download/)
+- [Coreutils](https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/)
+
 Пример использования:  
 
 ```bash
