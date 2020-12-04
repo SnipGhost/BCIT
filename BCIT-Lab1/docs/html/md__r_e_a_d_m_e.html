@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BCIT-Lab1: Московский государственный технический университет имени Н.Э. Баумана</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BCIT-Lab1
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Московский государственный технический университет имени Н.Э. Баумана </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1"></a>
+Лабораторная работа по дисциплине БКИТ №1</h1>
+<p>Выполнил: <a href="https://vk.com/snipghost">Михаил Кучеренко "SnipGhost", ИУ5-34</a>, 08.10.2017 </p>
+<p><br  />
+</p>
+<h2><a class="anchor" id="autotoc_md2"></a>
+I. Описание задания</h2>
+<p>Разработать программу для решения квадратного уравнения. <br  />
+</p><ol type="1">
+<li>Программа должна быть разработана в виде консольного приложения на языке C#. <br  />
+</li>
+<li>Программа осуществляет ввод с клавиатуры коэффициентов А, В, С, вычисляет дискриминант и корни уравнения (в зависимости от дискриминанта). <br  />
+</li>
+<li>Если коэффициент А, В, С введен некорректно, то необходимо проигнорировать некорректное значение и ввести коэффициент повторно. <br  />
+</li>
+</ol>
+<p>Квадратное уравнение вида A*x^2+B*x+C=0 имеет всегда два корня. В зависимости от дискриминанта они могут быть 2 различных действительных (D&gt;0), 2 действительных одинаковых (D=0) или комплексные (D&lt;0). Все 3 варианта реализованы. <br  />
+ </p>
+<p><br  />
+</p>
+<h2><a class="anchor" id="autotoc_md3"></a>
+II. Код программы</h2>
+<div class="fragment"><div class="line">﻿using System;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">namespace </span><a class="code" href="namespace_lab1.html">Lab1</a></div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">class </span>Program</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keyword">static</span> <span class="keywordtype">double</span> InputVal(<span class="keywordtype">string</span> prompt)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordtype">double</span> a = 0;</div>
+<div class="line">            <span class="keywordflow">do</span></div>
+<div class="line">                Console.Write(prompt);</div>
+<div class="line">            <span class="keywordflow">while</span> (!<span class="keywordtype">double</span>.TryParse(Console.ReadLine(), out a));</div>
+<div class="line"><span class="preprocessor">            #if AUTOTEST</span></div>
+<div class="line">                Console.WriteLine(a.ToString());</div>
+<div class="line"><span class="preprocessor">            #endif</span></div>
+<div class="line">            <span class="keywordflow">return</span> a;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">static</span> <span class="keywordtype">bool</span> AskContinue()</div>
+<div class="line">        {</div>
+<div class="line">            Console.Write(<span class="stringliteral">&quot;\nВыйти? (y/n) [n]: &quot;</span>);</div>
+<div class="line">            <span class="keywordtype">string</span> s = Console.ReadLine();</div>
+<div class="line"><span class="preprocessor">            #if AUTOTEST</span></div>
+<div class="line">                Console.WriteLine(s);</div>
+<div class="line"><span class="preprocessor">            #endif</span></div>
+<div class="line">            <span class="keywordflow">return</span> !(s == <span class="stringliteral">&quot;y&quot;</span>);</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">static</span> <span class="keywordtype">void</span> Main(<span class="keywordtype">string</span>[] args)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordtype">double</span> a, b, c;</div>
+<div class="line">            <span class="keywordflow">do</span></div>
+<div class="line">            {</div>
+<div class="line">                Console.Clear();</div>
+<div class="line"> </div>
+<div class="line">                a = InputVal(<span class="stringliteral">&quot;Введи A: &quot;</span>);</div>
+<div class="line">                b = InputVal(<span class="stringliteral">&quot;Введи B: &quot;</span>);</div>
+<div class="line">                c = InputVal(<span class="stringliteral">&quot;Введи C: &quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordtype">double</span> d = (b * b) - 4 * a * c;</div>
+<div class="line"> </div>
+<div class="line">                <span class="keywordflow">if</span> (d &lt; 0)</div>
+<div class="line">                {</div>
+<div class="line">                    Console.WriteLine(<span class="stringliteral">&quot;Комплексные корни&quot;</span>);</div>
+<div class="line">                }</div>
+<div class="line">                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (d == 0)</div>
+<div class="line">                {</div>
+<div class="line">                    <span class="keywordtype">double</span> x = (-b + Math.Sqrt(d)) / (2 * a);</div>
+<div class="line">                    Console.WriteLine(<span class="stringliteral">&quot;X = &quot;</span> + x);</div>
+<div class="line">                }</div>
+<div class="line">                <span class="keywordflow">else</span></div>
+<div class="line">                {</div>
+<div class="line">                    <span class="keywordtype">double</span> x1 = (-b + Math.Sqrt(d)) / (2 * a);</div>
+<div class="line">                    <span class="keywordtype">double</span> x2 = (-b - Math.Sqrt(d)) / (2 * a);</div>
+<div class="line">                    Console.WriteLine(<span class="stringliteral">&quot;X1 = &quot;</span> + x1 + <span class="stringliteral">&quot;\nX2 = &quot;</span> + x2);</div>
+<div class="line">                }</div>
+<div class="line"> </div>
+<div class="line">            } <span class="keywordflow">while</span> (AskContinue());</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p><a href="Program.cs">Исходный код</a> </p>
+<p><br  />
+</p>
+<h2><a class="anchor" id="autotoc_md4"></a>
+III. Примеры работы</h2>
+<p><br  />
+</p>
+<div class="fragment"><div class="line">Введи A: 1</div>
+<div class="line">Введи B: -2</div>
+<div class="line">Введи C: 1</div>
+<div class="line">X = 1</div>
+<div class="line"> </div>
+<div class="line">Выйти? (y/n) [n]: y</div>
+</div><!-- fragment --><p><br  />
+</p>
+<div class="fragment"><div class="line">Введи A: 1</div>
+<div class="line">Введи B: 7</div>
+<div class="line">Введи C: 10</div>
+<div class="line">X1 = -2</div>
+<div class="line">X2 = -5</div>
+<div class="line"> </div>
+<div class="line">Выйти? (y/n) [n]: y</div>
+</div><!-- fragment --><p><br  />
+</p>
+<div class="fragment"><div class="line">Введи A: 2</div>
+<div class="line">Введи B: 4</div>
+<div class="line">Введи C: 3</div>
+<div class="line">Комплексные корни</div>
+<div class="line"> </div>
+<div class="line">Выйти? (y/n) [n]: y</div>
+</div><!-- fragment --><p><br  />
+</p>
+<div class="fragment"><div class="line">Введи A: 1</div>
+<div class="line">Введи B: 5</div>
+<div class="line">Введи C: 2</div>
+<div class="line">X1 = -0,43844718719117</div>
+<div class="line">X2 = -4,56155281280883</div>
+<div class="line"> </div>
+<div class="line">Выйти? (y/n) [n]: y</div>
+</div><!-- fragment --><p><br  />
+</p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<div class="ttc" id="anamespace_lab1_html"><div class="ttname"><a href="namespace_lab1.html">Lab1</a></div><div class="ttdef"><b>Definition:</b> Program.cs:15</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

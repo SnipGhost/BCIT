@@ -55,6 +55,18 @@ else
     DESCRIPTIONFILE=$5
 fi
 
+if [ -z $6 ]; then
+    read -p "Input doxygen config file: " DOXYGEN_CONFIG
+    if [ "$DOXYGEN_CONFIG" = "" ]; then
+        DOXYGEN_CONFIG="Doxyfile"
+    fi
+else
+    DOXYGEN_CONFIG=$6
+fi
+
+# Generate auto-documentation
+doxygen $DOXYGEN_CONFIG
+
 INDEX=0
 while read -r LINE; do
     TEST[$INDEX]="$LINE"

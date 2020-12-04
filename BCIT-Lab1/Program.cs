@@ -1,4 +1,15 @@
-﻿using System;
+﻿/** \file Program.cs
+    @file       Program.cs
+    @brief      Файл исходных кодов проекта
+    @copyright  BMSTU
+    @author     Кучеренко М.А.
+    @date       Sun Oct 8 17:02:55 2017
+    @version    1.0.0
+\par Содержит класс:
+    @ref Lab1.Program
+*/
+
+using System;
 
 namespace Lab1
 {
