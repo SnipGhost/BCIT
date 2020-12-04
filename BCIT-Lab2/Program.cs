@@ -1,4 +1,21 @@
-﻿using System;
+﻿/** \file Program.cs
+    @file       Program.cs
+    @brief      Файл исходных кодов проекта
+    @copyright  BMSTU
+    @author     Кучеренко М.А.
+    @date       Sun Oct 8 17:02:55 2017
+    @version    1.0.0
+\par Содержит классы:
+    @ref Lab2.Program
+    @ref Lab2.GeometricFigure
+    @ref Lab2.Rectangle
+    @ref Lab2.Square
+    @ref Lab2.Circle
+\par Содержит интерфейсы:
+    @ref Lab2.IPrint
+*/
+
+using System;
 
 namespace Lab2
 {

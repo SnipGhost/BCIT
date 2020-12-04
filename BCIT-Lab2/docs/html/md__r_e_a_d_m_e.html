@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BCIT-Lab2: Московский государственный технический университет имени Н.Э. Баумана</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BCIT-Lab2
+   &#160;<span id="projectnumber">1.1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Московский государственный технический университет имени Н.Э. Баумана </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1"></a>
+Лабораторная работа по дисциплине БКИТ №2</h1>
+<p>Выполнил: <a href="https://vk.com/snipghost">Михаил Кучеренко "SnipGhost", ИУ5-34</a>, 08.10.2017 </p>
+<p><br  />
+</p>
+<h2><a class="anchor" id="autotoc_md2"></a>
+I.  Описание задания</h2>
+<p>Разработать программу, реализующую работу с классами. <br  />
+</p><ol type="1">
+<li>Программа должна быть разработана в виде консольного приложения на языке C#. <br  />
+</li>
+<li>Абстрактный класс «Геометрическая фигура» содержит виртуальный метод для вычисления площади фигуры. <br  />
+</li>
+<li>Класс «Прямоугольник» наследуется от «Геометрическая фигура». Ширина и высота объявляются как свойства (property). Класс должен содержать конструктор по параметрам «ширина» и «высота». <br  />
+</li>
+<li>Класс «Квадрат» наследуется от «Прямоугольник». Класс должен содержать конструктор по длине стороны. <br  />
+</li>
+<li>Класс «Круг» наследуется от «Геометрическая фигура». Радиус объявляется как свойство (property). Класс должен содержать конструктор по параметру «радиус». <br  />
+</li>
+<li>Для классов «Прямоугольник», «Квадрат», «Круг» переопределить виртуальный метод Object.ToString(), который возвращает в виде строки основные параметры фигуры и ее площадь.</li>
+<li>Разработать интерфейс IPrint. Интерфейс содержит метод Print(), который не принимает параметров и возвращает void. Для классов «Прямоугольник», «Квадрат», «Круг» реализовать наследование от интерфейса IPrint. Переопределяемый метод Print() выводит на консоль информацию, возвращаемую переопределенным методом ToString(). <br  />
+ </li>
+</ol>
+<p><br  />
+</p>
+<h2><a class="anchor" id="autotoc_md3"></a>
+II. Схема данных</h2>
+<p><img src="img/1.png" alt="GeometricFigure" class="inline"/> <img src="img/2.png" alt="IPrint" class="inline"/> <img src="img/3.png" alt="Rectangle" class="inline"/> <img src="img/4.png" alt="Square" class="inline"/> <img src="img/5.png" alt="Circle" class="inline"/> </p>
+<p><br  />
+</p>
+<h2><a class="anchor" id="autotoc_md4"></a>
+III. Код программы</h2>
+<div class="fragment"><div class="line"><span class="keyword">using</span> System;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">namespace </span><a class="code" href="namespace_lab2.html">Lab2</a></div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">class </span>Program</div>
+<div class="line">    {</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">static</span> <span class="keywordtype">double</span> InputVal(<span class="keywordtype">string</span> prompt)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordtype">double</span> a = 0;</div>
+<div class="line">            <span class="keywordflow">do</span></div>
+<div class="line">                Console.Write(prompt);</div>
+<div class="line">            <span class="keywordflow">while</span> (!<span class="keywordtype">double</span>.TryParse(Console.ReadLine(), out a));</div>
+<div class="line"><span class="preprocessor">            #if AUTOTEST</span></div>
+<div class="line">                Console.WriteLine(a);</div>
+<div class="line"><span class="preprocessor">            #endif</span></div>
+<div class="line">            <span class="keywordflow">return</span> a;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span>STATE</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keyword">public</span> <span class="keyword">const</span> String Rectangle = <span class="stringliteral">&quot;1&quot;</span>;</div>
+<div class="line">            <span class="keyword">public</span> <span class="keyword">const</span> String Sqare = <span class="stringliteral">&quot;2&quot;</span>;</div>
+<div class="line">            <span class="keyword">public</span> <span class="keyword">const</span> String Circle = <span class="stringliteral">&quot;3&quot;</span>;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">static</span> <span class="keywordtype">string</span> Menu()</div>
+<div class="line">        {</div>
+<div class="line">            Console.WriteLine(<span class="stringliteral">&quot;Площадь чего вы бы хотели посчитать?&quot;</span>);</div>
+<div class="line">            Console.WriteLine(<span class="stringliteral">&quot;1. Прямоугольник;&quot;</span>);</div>
+<div class="line">            Console.WriteLine(<span class="stringliteral">&quot;2. Квадрат;&quot;</span>);</div>
+<div class="line">            Console.WriteLine(<span class="stringliteral">&quot;3. Окружность;&quot;</span>);</div>
+<div class="line">            Console.WriteLine(<span class="stringliteral">&quot;e. Выход;&quot;</span>);</div>
+<div class="line">            <span class="keywordtype">string</span> s = Console.ReadLine();</div>
+<div class="line"><span class="preprocessor">            #if AUTOTEST</span></div>
+<div class="line">                Console.WriteLine(s);</div>
+<div class="line"><span class="preprocessor">            #endif</span></div>
+<div class="line">            <span class="keywordflow">return</span> s;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">static</span> <span class="keywordtype">void</span> ClearScreen()</div>
+<div class="line">        {</div>
+<div class="line">            Console.WriteLine(<span class="stringliteral">&quot;Нажмите enter для продолжения ...&quot;</span>);</div>
+<div class="line">            Console.ReadLine();</div>
+<div class="line">            Console.Clear();</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">static</span> <span class="keywordtype">void</span> Main(<span class="keywordtype">string</span>[] args)</div>
+<div class="line">        {</div>
+<div class="line">            IPrint obj;</div>
+<div class="line">            <span class="keywordtype">bool</span> exitFlag = <span class="keyword">false</span>;</div>
+<div class="line">            <span class="keywordtype">double</span> a1, b1;</div>
+<div class="line">            <span class="keywordflow">do</span></div>
+<div class="line">            {</div>
+<div class="line">                <span class="keywordflow">switch</span> (Menu())</div>
+<div class="line">                {</div>
+<div class="line">                    <span class="keywordflow">case</span> STATE.<a class="code" href="class_lab2_1_1_rectangle.html">Rectangle</a>:</div>
+<div class="line">                        a1 = InputVal(<span class="stringliteral">&quot;Введите высоту прямоугольника \n&quot;</span>);</div>
+<div class="line">                        b1 = InputVal(<span class="stringliteral">&quot;Введите ширину прямоугольника \n&quot;</span>);</div>
+<div class="line">                        obj = <span class="keyword">new</span> Rectangle(a1, b1);</div>
+<div class="line">                        obj.Print();</div>
+<div class="line">                        <span class="keywordflow">break</span>;</div>
+<div class="line"> </div>
+<div class="line">                    <span class="keywordflow">case</span> STATE.Sqare:</div>
+<div class="line">                        a1 = InputVal(<span class="stringliteral">&quot;Введите высоту квадрата \n&quot;</span>);</div>
+<div class="line">                        obj = <span class="keyword">new</span> Square(a1);</div>
+<div class="line">                        obj.Print();</div>
+<div class="line">                        <span class="keywordflow">break</span>;</div>
+<div class="line"> </div>
+<div class="line">                    <span class="keywordflow">case</span> STATE.Circle:</div>
+<div class="line">                        a1 = InputVal(<span class="stringliteral">&quot;Введите радиус окружности \n&quot;</span>);</div>
+<div class="line">                        obj = <span class="keyword">new</span> Circle(a1);</div>
+<div class="line">                        obj.Print();</div>
+<div class="line">                        <span class="keywordflow">break</span>;</div>
+<div class="line"> </div>
+<div class="line">                    <span class="keywordflow">default</span>:</div>
+<div class="line">                        exitFlag = <span class="keyword">true</span>;</div>
+<div class="line">                        <span class="keywordflow">break</span>;</div>
+<div class="line">                }</div>
+<div class="line">                ClearScreen();</div>
+<div class="line"> </div>
+<div class="line">            } <span class="keywordflow">while</span> (!exitFlag);</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">interface </span>IPrint</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordtype">void</span> Print();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">abstract</span> <span class="keyword">class </span>GeometricFigure</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keywordtype">double</span> Area();</div>
+<div class="line">        <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">override</span> <span class="keywordtype">string</span> ToString();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">class </span>Rectangle : GeometricFigure, IPrint</div>
+<div class="line">    {</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">private</span> <span class="keywordtype">double</span> h = 0; </div>
+<div class="line">        <span class="keyword">private</span> <span class="keywordtype">double</span> w = 0; </div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">double</span> H { <span class="keyword">get</span> =&gt; h; <span class="keyword">set</span> =&gt; h = value; }</div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">double</span> W { <span class="keyword">get</span> =&gt; w; <span class="keyword">set</span> =&gt; w = value; }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">public</span> <a class="code" href="class_lab2_1_1_rectangle.html#acdb99dd549f51743792cad788e500849">Rectangle</a>(<span class="keywordtype">double</span> height, <span class="keywordtype">double</span> width)</div>
+<div class="line">        {</div>
+<div class="line">            H = height;</div>
+<div class="line">            W = width;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">double</span> <a class="code" href="class_lab2_1_1_rectangle.html#a3a44a2229aaec3be07a35eb6a167b100">Area</a>()</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">return</span> W * H;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code" href="class_lab2_1_1_rectangle.html#a6c03cbd28985951c1c167b51ed47cdd4">ToString</a>()</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Rectangle: &quot;</span> + W.ToString() + <span class="stringliteral">&quot;x&quot;</span> + H.ToString() + <span class="stringliteral">&quot;, S = &quot;</span> + <a class="code" href="class_lab2_1_1_rectangle.html#a3a44a2229aaec3be07a35eb6a167b100">Area</a>().ToString();</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_lab2_1_1_rectangle.html#a7bc8ce3f09ba299aba57045c396b6b4e">Print</a>() =&gt; Console.WriteLine(<span class="keyword">this</span>);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">class </span>Square : Rectangle</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keyword">public</span> <a class="code" href="class_lab2_1_1_square.html#adf14884086bf810bde5cb9dc18e10a82">Square</a>(<span class="keywordtype">double</span> length) : base(length, length) {}</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code" href="class_lab2_1_1_square.html#ac43e17280bb521a3466a38ec0e4742eb">ToString</a>()</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Square: &quot;</span> + H.ToString() + <span class="stringliteral">&quot;x&quot;</span> + H.ToString() + <span class="stringliteral">&quot;, S = &quot;</span> + <a class="code" href="class_lab2_1_1_rectangle.html#a3a44a2229aaec3be07a35eb6a167b100">Area</a>().ToString();</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">class </span>Circle : GeometricFigure, IPrint</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keyword">private</span> <span class="keywordtype">double</span> r = 0; </div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">double</span> R { <span class="keyword">get</span> =&gt; r; <span class="keyword">set</span> =&gt; r = value; }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">public</span> <a class="code" href="class_lab2_1_1_circle.html#ac95d3e44e178cf6199237fc74698465c">Circle</a>(<span class="keywordtype">double</span> radius)</div>
+<div class="line">        {</div>
+<div class="line">            R = radius;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">double</span> <a class="code" href="class_lab2_1_1_circle.html#afe38ef7cc9ce4b02a6e640d3029e5962">Area</a>()</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">return</span> Math.PI * R * R;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">string</span> <a class="code" href="class_lab2_1_1_circle.html#ab2ed9c25791cb878a8a8d8857786917d">ToString</a>()</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Circle: &quot;</span> + R.ToString() + <span class="stringliteral">&quot;, S = &quot;</span> + <a class="code" href="class_lab2_1_1_circle.html#afe38ef7cc9ce4b02a6e640d3029e5962">Area</a>().ToString();</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_lab2_1_1_circle.html#a300cdfbc89e35dadfdcd35ff085ffc13">Print</a>() =&gt; Console.WriteLine(<span class="keyword">this</span>);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p><a href="Program.cs">Исходный код</a> <br  />
+ </p>
+<p><br  />
+</p>
+<p><br  />
+ <br  />
+ <br  />
+ <br  />
+ <br  />
+</p>
+<h2><a class="anchor" id="autotoc_md5"></a>
+IV. Примеры работы программы</h2>
+<p><br  />
+</p>
+<div class="fragment"><div class="line">1. Прямоугольник;</div>
+<div class="line">2. Квадрат;</div>
+<div class="line">3. Окружность;</div>
+<div class="line">e. Выход;</div>
+<div class="line">1</div>
+<div class="line">Введите высоту прямоугольника</div>
+<div class="line">10</div>
+<div class="line">Введите ширину прямоугольника</div>
+<div class="line">20</div>
+<div class="line">Rectangle: 20x10, S = 200</div>
+<div class="line">Нажмите любую клавишу для продолжения ...</div>
+</div><!-- fragment --><p><br  />
+</p>
+<div class="fragment"><div class="line">1. Прямоугольник;</div>
+<div class="line">2. Квадрат;</div>
+<div class="line">3. Окружность;</div>
+<div class="line">e. Выход;</div>
+<div class="line">2</div>
+<div class="line">Введите высоту квадрата</div>
+<div class="line">10</div>
+<div class="line">Rectangle: 10x10, S = 100</div>
+<div class="line">Нажмите любую клавишу для продолжения ...</div>
+</div><!-- fragment --><p><br  />
+</p>
+<div class="fragment"><div class="line">1. Прямоугольник;</div>
+<div class="line">2. Квадрат;</div>
+<div class="line">3. Окружность;</div>
+<div class="line">e. Выход;</div>
+<div class="line">3</div>
+<div class="line">Введите радиус окружности</div>
+<div class="line">10</div>
+<div class="line">Circle: 10, S = 314,159265358979</div>
+<div class="line">Нажмите любую клавишу для продолжения ...</div>
+</div><!-- fragment --><p><br  />
+</p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<div class="ttc" id="aclass_lab2_1_1_rectangle_html"><div class="ttname"><a href="class_lab2_1_1_rectangle.html">Lab2.Rectangle</a></div><div class="ttdef"><b>Definition:</b> Program.cs:140</div></div>
+<div class="ttc" id="aclass_lab2_1_1_circle_html_a300cdfbc89e35dadfdcd35ff085ffc13"><div class="ttname"><a href="class_lab2_1_1_circle.html#a300cdfbc89e35dadfdcd35ff085ffc13">Lab2.Circle.Print</a></div><div class="ttdeci">void Print()</div></div>
+<div class="ttc" id="aclass_lab2_1_1_circle_html_afe38ef7cc9ce4b02a6e640d3029e5962"><div class="ttname"><a href="class_lab2_1_1_circle.html#afe38ef7cc9ce4b02a6e640d3029e5962">Lab2.Circle.Area</a></div><div class="ttdeci">override double Area()</div><div class="ttdef"><b>Definition:</b> Program.cs:229</div></div>
+<div class="ttc" id="anamespace_lab2_html"><div class="ttname"><a href="namespace_lab2.html">Lab2</a></div><div class="ttdef"><b>Definition:</b> Program.cs:21</div></div>
+<div class="ttc" id="aclass_lab2_1_1_square_html_ac43e17280bb521a3466a38ec0e4742eb"><div class="ttname"><a href="class_lab2_1_1_square.html#ac43e17280bb521a3466a38ec0e4742eb">Lab2.Square.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> Program.cs:200</div></div>
+<div class="ttc" id="aclass_lab2_1_1_rectangle_html_a3a44a2229aaec3be07a35eb6a167b100"><div class="ttname"><a href="class_lab2_1_1_rectangle.html#a3a44a2229aaec3be07a35eb6a167b100">Lab2.Rectangle.Area</a></div><div class="ttdeci">override double Area()</div><div class="ttdef"><b>Definition:</b> Program.cs:164</div></div>
+<div class="ttc" id="aclass_lab2_1_1_rectangle_html_acdb99dd549f51743792cad788e500849"><div class="ttname"><a href="class_lab2_1_1_rectangle.html#acdb99dd549f51743792cad788e500849">Lab2.Rectangle.Rectangle</a></div><div class="ttdeci">Rectangle(double height, double width)</div><div class="ttdef"><b>Definition:</b> Program.cs:155</div></div>
+<div class="ttc" id="aclass_lab2_1_1_square_html_adf14884086bf810bde5cb9dc18e10a82"><div class="ttname"><a href="class_lab2_1_1_square.html#adf14884086bf810bde5cb9dc18e10a82">Lab2.Square.Square</a></div><div class="ttdeci">Square(double length)</div><div class="ttdef"><b>Definition:</b> Program.cs:194</div></div>
+<div class="ttc" id="aclass_lab2_1_1_rectangle_html_a7bc8ce3f09ba299aba57045c396b6b4e"><div class="ttname"><a href="class_lab2_1_1_rectangle.html#a7bc8ce3f09ba299aba57045c396b6b4e">Lab2.Rectangle.Print</a></div><div class="ttdeci">void Print()</div></div>
+<div class="ttc" id="aclass_lab2_1_1_circle_html_ac95d3e44e178cf6199237fc74698465c"><div class="ttname"><a href="class_lab2_1_1_circle.html#ac95d3e44e178cf6199237fc74698465c">Lab2.Circle.Circle</a></div><div class="ttdeci">Circle(double radius)</div><div class="ttdef"><b>Definition:</b> Program.cs:221</div></div>
+<div class="ttc" id="aclass_lab2_1_1_rectangle_html_a6c03cbd28985951c1c167b51ed47cdd4"><div class="ttname"><a href="class_lab2_1_1_rectangle.html#a6c03cbd28985951c1c167b51ed47cdd4">Lab2.Rectangle.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> Program.cs:173</div></div>
+<div class="ttc" id="aclass_lab2_1_1_circle_html_ab2ed9c25791cb878a8a8d8857786917d"><div class="ttname"><a href="class_lab2_1_1_circle.html#ab2ed9c25791cb878a8a8d8857786917d">Lab2.Circle.ToString</a></div><div class="ttdeci">override string ToString()</div><div class="ttdef"><b>Definition:</b> Program.cs:238</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>
